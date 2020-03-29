@@ -27,11 +27,11 @@ th,td {
 
 .hovertr:hover {
     cursor: pointer;
-    background-color: grey !important;
+    background-color: lightslategrey;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: lightgrey;
 }
 
 td {
@@ -67,25 +67,24 @@ td {
 
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
-    padding-top: 200px;
-    /* Location of the box */
+    padding-top: 300px;
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
+    font-family: Calibri;
+    
+}
+
+.modal-content {
+    background-color: cornflowerblue;
+    text-align: center;
+    width: 30%;
 }
 
 
@@ -104,7 +103,19 @@ td {
     cursor: pointer;
 }
 
-.center {
+.centerModal {
     text-align: center;
     font-size: 26px;
 }
+
+.buttonlayout {
+    margin-top: 10px;
+    text-align: left;
+ 
+    button {
+     background-color: cornflowerblue;
+     font-family: Calibri;
+     font-weight: bold;
+    }
+    text-align: center;
+ }
