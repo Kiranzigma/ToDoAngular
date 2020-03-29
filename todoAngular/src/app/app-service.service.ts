@@ -7,7 +7,7 @@ export class AppServiceService {
 
   constructor(private http: HttpClient) { }
 
-  geturl(path: string, param: any[]) {
+  constructUrl(path: string, param: any[]) {
 
     let url_map = environment.services.filter(x => x.code == path);
 
@@ -23,29 +23,29 @@ export class AppServiceService {
 
   get<T>(url: string, param?: any[]) {
 
-    let urlparam = this.geturl(url, param);
+    let requiredParameter = this.constructUrl(url, param);
 
-    return this.http.get<T>(urlparam);
+    return this.http.get<T>(requiredParameter);
   }
 
   post<T>(url: string, body: any){
     
-    let urlparam = this.geturl(url, null);
+    let requiredParameter = this.constructUrl(url, null);
 
-    return this.http.post<T>(urlparam,body);
+    return this.http.post<T>(requiredParameter,body);
   }
 
   put<T>(url: string,body:any, param?:any[]){
   
-    let urlparam = this.geturl(url, param);
+    let requiredParameter = this.constructUrl(url, param);
 
-    return this.http.put<T>(urlparam,body);
+    return this.http.put<T>(requiredParameter,body);
   }
 
   delete<T>(url: string, param: any[]) {
 
-    let urlparam = this.geturl(url, param);
+    let requiredParameter = this.constructUrl(url, param);
 
-    return this.http.delete<T>(urlparam);
+    return this.http.delete<T>(requiredParameter);
   }
 }

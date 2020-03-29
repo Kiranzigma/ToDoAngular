@@ -16,9 +16,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ViewComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AppServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

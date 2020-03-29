@@ -1,3 +1,5 @@
 <nav>
   <div>{{title}}</div>
 </nav>
+<app-view-component *ngIf="showBtn == 'Add'" [showBtn]="showBtn" (show)="outputemit($event)"></app-view-component>
+<router-outlet></router-outlet>

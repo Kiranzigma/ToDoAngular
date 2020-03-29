@@ -1,4 +1,4 @@
-export interface IResponse{
+export interface interfaceResponse{
     title: String;
     description: String;
     createdDate : Date;

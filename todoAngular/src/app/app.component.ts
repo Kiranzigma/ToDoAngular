@@ -8,4 +8,15 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Simple Todo Application';
+  constructor() { 
+
+  }
+  show : any;
+  showBtn : any = "Add";
+  ngOnInit(): void {
+    
+  }
+  outputemit(x : string){
+    this.showBtn = x;
+  }
 }
