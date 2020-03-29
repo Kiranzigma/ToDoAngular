@@ -4,14 +4,7 @@
 
 export const environment = {
   production: false,
-  "todoApi_url":"http://localhost:3000/",
-  "services":[
-    // gets all todo
-    {code:"Todo-All",url:"todos"},
-    {code:"Todo-Delete",url:"todos"},
-    {code:"Todo-Put",url:"todos"},
-    {code:"Todo-Post",url:"todos"}
-  ]
+  "todoApi_url":"http://localhost:3000/"
 };
 
 /*

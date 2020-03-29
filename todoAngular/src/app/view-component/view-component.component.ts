@@ -25,7 +25,7 @@ export class ViewComponentComponent implements OnInit {
   }
   
   getAlltodo() {
-    this.service.get('TD-All').subscribe(x => {
+    this.service.get('todos').subscribe(x => {
     this.viewall = x;
     this.viewall.reverse();
     });
@@ -55,18 +55,18 @@ export class ViewComponentComponent implements OnInit {
     event.stopPropagation();
     let arr = [];
     arr.push(x.id);
-    this.service.delete<interfaceResponse>('TD-Del', arr).subscribe(y=>{
+    this.service.delete<interfaceResponse>('todos', arr).subscribe(y=>{
       this.getAlltodo();
     });
   }
-  
+
   complete(x: any) {
     event.stopPropagation();
     let arr = [];
     arr.push(x.id);
     let body = Object(x);
     body.isCompleted = true;
-    this.service.put<interfaceResponse>('TD-Put', body, arr).subscribe(y =>{
+    this.service.put<interfaceResponse>('todos', body, arr).subscribe(y =>{
       body.modifiedDate = y.modifiedDate;
     });
   }
@@ -77,7 +77,7 @@ export class ViewComponentComponent implements OnInit {
     arr.push(x.id);
     let body = Object(x);
     body.isCompleted = false;
-    this.service.put<interfaceResponse>('TD-Put', body, arr).subscribe(y =>{
+    this.service.put<interfaceResponse>('todos', body, arr).subscribe(y =>{
       body.modifiedDate = y.modifiedDate;
     });
   }

@@ -9,9 +9,7 @@ export class AppServiceService {
 
   constructUrl(path: string, param: any[]) {
 
-    let url_map = environment.services.filter(x => x.code == path);
-
-    let url = environment.todoApi_url + url_map[0].url;
+    let url = environment.todoApi_url + path;
 
     if (param) {
       param.forEach(x => {
