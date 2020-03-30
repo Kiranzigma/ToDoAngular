@@ -39,7 +39,7 @@ export class AddComponentComponent implements OnInit {
       if (time) {
         UtcDate.setHours(time.toString().substring(0, 2));
         UtcDate.setMinutes(time.toString().substring(3, 5));
-        save = 1;
+        save = true;
       }
       dateSave = UtcDate.toISOString();
     }
@@ -50,7 +50,7 @@ export class AddComponentComponent implements OnInit {
       dueDate:dateSave 
     };
     
-    if(body.title != null && body.description != null && body.dueDate != null && save == 1 )  {
+    if(body.title != null && body.description != null && body.dueDate != null && save == true )  {
       this.service.post('todos',body).subscribe(y =>{
         this.emit();
       });
