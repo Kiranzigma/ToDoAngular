@@ -19,25 +19,25 @@
     </tr>
     <tr class="hovertr" (click)="expand(view)" *ngFor="let view of viewall; let i = index;">
         <td>
-            <del *ngIf="view.isCompleted == true"> 
+            <span class ="incomplete" *ngIf="view.isCompleted == true"> 
                 {{i+1}}
-            </del>
+            </span>
             <span *ngIf="view.isCompleted == false">
                 {{i+1}}
             </span>
         </td>
         <td>
-            <del *ngIf="view.isCompleted == true"> 
+            <span class ="incomplete" *ngIf="view.isCompleted == true"> 
                {{ view.title }}
-            </del>
+            </span>
             <span *ngIf="view.isCompleted == false">
                 {{ view.title }}
             </span>
         </td>
         <td>
-            <del *ngIf="view.isCompleted == true">
+            <span class ="incomplete" *ngIf="view.isCompleted == true">
                 {{ view.dueDate | date:'medium'}}
-            </del>
+            </span>
             <span *ngIf="view.isCompleted == false">
                 {{ view.dueDate | date:'medium'}}
             </span>

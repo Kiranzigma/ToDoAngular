@@ -34,6 +34,7 @@ tr:nth-child(even) {
     background-color: lightgrey;
 }
 
+
 td {
     .complete:hover {
         cursor: pointer;
@@ -87,8 +88,14 @@ td {
     width: 30%;
 }
 
+.incomplete{
+    font-weight: bold;
+    color: red;
+    text-decoration: line-through;
+ }
 
-/* The Close Button */
+
+ /* The closing button */
 
 .close {
     color: #aaaaaa;
@@ -119,3 +126,5 @@ td {
     }
     text-align: center;
  }
+
+ 
