@@ -37,12 +37,12 @@ tr:nth-child(even) {
 td {
     .complete:hover {
         cursor: pointer;
-        background-color: green;
+        background-color: purple;
         color: white;
     }
     .del:hover {
         cursor: pointer;
-        background-color: red;
+        background-color: peru;
         color: white;
     }
     button {
